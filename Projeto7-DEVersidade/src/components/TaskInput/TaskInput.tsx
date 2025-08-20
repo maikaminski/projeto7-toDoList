@@ -1,4 +1,6 @@
 import { useState } from "react";
+import styles from "./TaskInput.module.css"
+
 function TaskInput() {
 	const [task, setTask] = useState("");
 	const [tasks, setTasks] = useState<string[]>([]);
@@ -11,7 +13,7 @@ function TaskInput() {
 
 	return (
 		<div>
-			<input 
+			<input
 				type="text"
 				value={task}
 				onChange={(e) => setTask(e.target.value)}

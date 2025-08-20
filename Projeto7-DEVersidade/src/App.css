@@ -11,3 +11,8 @@
     --terciary: #9e9b9b;
   }
 }
+
+body {
+  display: flex;
+  
+}
