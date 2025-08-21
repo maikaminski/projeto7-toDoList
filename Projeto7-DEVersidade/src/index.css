@@ -4,9 +4,38 @@
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  justify-content: center;
+:root {
+  --primary: #292d32;
+  --secondary: #d2d2d3;
+  --background: #e9e9ee;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #d3d2d2;
+    --secondary: #464447;
+    --background: #3b3c3d;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--background);
+  color: var(--primary);
+}
+
+/* Layout do App */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* cresce e empurra o footer */
+}
 

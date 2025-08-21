@@ -1,0 +1,15 @@
+.header {
+  background: var(--secondary);
+  color: var(--primary);
+  display: flex;
+  align-items: center;   /* alinha verticalmente logo e título */
+  justify-content: center;
+height: 80px; 
+  gap: 10px;             /* espaço entre logo e título */
+}
+
+img {
+max-height: 250px;         /* cabe dentro do header */
+  width: auto;              /* mantém proporção */
+  object-fit: contain;     /* mantém proporção */
+}
