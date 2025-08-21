@@ -1,26 +1,29 @@
 import { useState } from "react";
 import styles from "./TaskInput.module.css"
 
-function TaskInput() {
+interface TaskInputProps {
+	onAddTask: (title: string) => void;
+}
+function TaskInput({ onAddTask }: TaskInputProps) {
 	const [task, setTask] = useState("");
-	const [tasks, setTasks] = useState<string[]>([]);
 
-	function handleAddTask() {
+	function handleSubmit(e: React.FormEvent) {
+		e.preventDefault();
 		if (task.trim() === "") return;
-		setTasks([...tasks, task]);
+		onAddTask(task.trim());
 		setTask("");
 	}
 
 	return (
-		<div>
+		<form className={styles.taskInput} onSubmit={handleSubmit}>
 			<input
 				type="text"
 				value={task}
 				onChange={(e) => setTask(e.target.value)}
 				placeholder="Digite aqui a nova tarefa..."
 			/>
-			<button onClick={handleAddTask}>Adicionar</button>
-		</div>
+			<button type="submit">Adicionar</button>
+		</form>
 	)
 }
 
