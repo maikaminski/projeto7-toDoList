@@ -38,4 +38,117 @@ body {
 main {
   flex: 1; /* cresce e empurra o footer */
 }
+.lista-tarefas {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  max-width: 500px;
+}
 
+.lista-tarefas li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  background: var(--secondary);
+  color: var(--primary);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.lista-tarefas li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.lista-tarefas li.concluida {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #b0b0b0;
+}
+
+.lista-tarefas input[type="checkbox"] {
+  accent-color: #28a745;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.lista-tarefas span {
+  flex: 1;
+  word-break: break-word;
+  font-weight: 600;
+  font-size: 17px;
+  color: #1f1f1f;
+}
+
+.contador-tarefas {
+  position: relative;
+  margin: 20px auto 40px auto;
+  max-width: 500px;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .lista-tarefas {
+    max-width: 90%;
+  }
+
+  .lista-tarefas li {
+    padding: 12px 16px;
+    border-radius: 16px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .lista-tarefas span {
+    font-size: 15px;
+  }
+
+  .lista-tarefas input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+
+  .contador-tarefas {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-tarefas {
+    max-width: 95%;
+    margin: 20px auto;
+  }
+
+  .lista-tarefas li {
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .lista-tarefas span {
+    font-size: 14px;
+  }
+
+  .lista-tarefas input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  .contador-tarefas {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
