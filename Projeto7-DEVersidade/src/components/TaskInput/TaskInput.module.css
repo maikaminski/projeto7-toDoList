@@ -1,0 +1,17 @@
+.taskInput {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 0.5em 3em;
+    margin-right: 1em;
+    border-radius: 5px;
+}
+
+button {
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 0.5em;
+    border-radius: 5px;
+}
